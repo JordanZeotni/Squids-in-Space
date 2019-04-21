@@ -1,19 +1,19 @@
 {
-  "itemName" : "inidolparasol",
-  "price" : 650,
-  "level" : 6,
+  "itemName" : "inklingtier1broadsword",
+  "price" : 455,
+  "level" : 1,
   "maxStack" : 1,
-  "rarity" : "Rare",
-  "description" : "For when you're really tired of messing around and just want to find your lost cousin already.",
-  "shortdescription" : "Chill Idol's Parasol",
+  "rarity" : "common",
+  "description" : "A pretty big paintbrush. It's surprisingly light, so you could easily brandish it with many swift flicks.",
+  "shortdescription" : "Inkbrush",
   "tooltipKind" : "sword",
-  "category" : "Parasol",
+  "category" : "Brush",
   "twoHanded" : true,
   "itemTags" : ["weapon","melee","broadsword"],
-  "inventoryIcon" : "inidolparasol.png",
+  "inventoryIcon" : "inkbrush.png",
   "animation" : "/animation/weapons/broadsword/greenswordswoosh.animation",
   "animationParts" : {
-    "blade" : "inidolparasol.png",
+    "blade" : "inkbrush.png",
     "handle" : ""
   }, 
   "animationCustom" : {
@@ -22,7 +22,7 @@
         "blade": {
           "properties": {
             "offset": [
-              0.7,
+              0.3,
               2.4
             ]
           }
@@ -30,22 +30,24 @@
       }
     },
     "sounds" : {
-      "fire" : [ "/sfx/melee/swing_dagger_poison2.ogg" ]
+      "fire" : [ "/sfx/melee/swing_dagger_poison1.ogg", "/sfx/melee/swing_dagger_poison2.ogg", "/sfx/melee/swing_dagger_poison3.ogg" ]
     }
   },
   "scripts" : ["/items/active/weapons/melee/meleeweapon.lua"],
-  "elementalType" : "poison",
+  "elementalType" : "physical",
   "primaryAbilityType" : "broadswordcombo",
   "primaryAbility"  : {
-    "fireTime" : 0.7,
-    "baseDps" : 16.5,
+    "fireTime" : 0.9,
+    "baseDps" : 9.1,
     "damageConfig" : {
       "damageSourceKind" : "broadsword",
-      "knockback" : 35,
+      "knockback" : 10,
       "knockbackMode" : "facing",
       "timeoutGroup" : "primary"
     }
   },
-  "altAbilityType" : "parry",
+  "baseWeaponRotation" : 20,
+  "palette" : "/items/active/weapons/colors/tier1melee.weaponcolors",
+  "altAbilityType" : "spinslash",
   "builder" : "/items/buildscripts/buildunrandweapon.lua"
 }
